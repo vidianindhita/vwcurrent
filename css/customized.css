@@ -539,3 +539,120 @@ a.buttons:not(:last-child):nth-last-child(4) {
 .table thead th {
 	border: 0;
 }
+
+.button1 {
+	margin-left: 43%;
+}
+
+.button2 {
+	display: none;
+	margin-left: 41%;
+	/*width: 120px;*/
+	background-color: #ffffff;
+	border-bottom: 1px solid #41C0DE;
+}
+
+.login-box {
+    margin-top: 75px;
+    height: auto;
+    /*background: #1A2226;*/
+    text-align: center;
+    /*box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);*/
+}
+
+
+.login-title {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ECF0F5;
+}
+
+.login-form {
+    margin-top: 25px;
+    text-align: left;
+}
+
+
+input[type=password] {
+    /*background-color: #1A2226;*/
+    border: none;
+    border-bottom: 2px solid #40C0DE;
+    border-top: 0px;
+    border-radius: 0px;
+    outline: 0;
+    padding-left: 0px;
+    margin-bottom: 40px;
+    color: #000000;
+    text-align: center;
+    width: 95%;
+    font-size: 20px;
+}
+
+.form-group {
+    margin-bottom: 40px;
+    outline: 0px;
+}
+
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-bottom: 2px solid #FADE2B;
+    outline: 0;
+    /*background-color: #1A2226;*/
+    color: #000000;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0;
+    border-bottom: 2px solid #FADE2B;
+}
+
+label {
+    margin-bottom: 0px;
+}
+
+.form-control-label {
+    font-size: 16px;
+    color: #6C6C6C;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn-outline-primary {
+    /*border-color: #0DB8DE;*/
+    color: #0DB8DE;
+    border-radius: 0px;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.btn-outline-primary:hover {
+    background-color: #0DB8DE;
+    right: 0px;
+}
+
+.login-btm {
+    float: left;
+}
+
+.login-button {
+    padding-right: 0px;
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+.login-text {
+    text-align: left;
+    padding-left: 0px;
+    color: #40C0DE;
+}
+
+.loginbttm {
+    padding: 0px;
+}
