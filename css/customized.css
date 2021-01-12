@@ -656,3 +656,72 @@ label {
 .loginbttm {
     padding: 0px;
 }
+
+.box {
+	margin-top: -70px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.box span {
+	width: 40px;
+	height: 40px;
+  display: block;
+	border-right: 2px solid #40C0DE;
+	border-bottom: 2px solid #40C0DE;
+	transform: rotate(45deg);
+	margin: -10px;
+	animation: animate 2s infinite;
+}
+
+.box span:nth-child(2) {
+	animation-delay: -0.2s;
+}
+
+.box span:nth-child(3) {
+	animation-delay: -0.4s;
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+		transform: rotate(45deg) translate(10px, 10px);
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+#divToShowHide{
+  	top:300px;
+	position:fixed;
+}
+.BeforeScroll {
+  height: 100px;
+  width: 100%;
+  display: none;
+  opacity: 0;
+  transform: translate(0, 10vh);
+  transition: all 1s;
+}
+.AfterScroll {
+  height: 1000px;
+  width: 100%;
+  display: block;
+  opacity: 1;
+  transform: translate(0, 0);
+}
+/*
+.tag {
+  opacity: 0;
+  transform: translate(0, 10vh);
+  transition: all 1s;
+}
+
+.tag.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}*/

@@ -36,7 +36,7 @@
             <div class="row align-items-center justify-content-between">
                 <div class="col-6 col-lg-4">
                     <div class="float-left">
-                        <p>Good morning, Vidia.</p>
+                        <p style="font-weight: 600; font-size: 20px;">Good morning, Vidia.</p>
                     </div>
                 </div>
                 <div class="col-6 col-lg-4 col-md-6 col-sm-6 logo-wrapper">
@@ -123,6 +123,17 @@
 <section class="blog_area single-post-area area-padding">
     <div class="container">
         <div class="row">
+            <div class="col-lg-4">
+                <!-- <div class="tag"> -->
+                    <div id="divToShowHide" class="BeforeScroll">
+                        <p>Written by</p>
+                        <h4>Ralph Allora</h4>
+                        <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal2">
+                           <i class="far fa-comment"></i> 6 Responses
+                        </button>
+                    </div>
+                <!-- </div> -->
+            </div>
             <div class="col-lg-8 offset-md-2 posts-list">
                 <div class="single-post">
                     <div class="blog_details">
@@ -244,6 +255,10 @@
 
                         </div>
                        
+                    </div>
+                    <div class="meta-top d-flex">
+                        <a href="#" style="margin-left: 0; margin-bottom: 10px; color: #ffffff; font-size: 14px; background: #40C0DE; padding-left: 10px; padding-right: 10px; padding-top: 5px; border: 1px solid #40C0DE; border-radius: 5px; margin-right: 5px;">EV Life</a>
+                        <a href="#" style="margin-left: 0; margin-bottom: 10px; color: #ffffff; font-size: 14px; background: #40C0DE; padding-left: 10px; padding-right: 10px; padding-top: 5px; border: 1px solid #40C0DE; border-radius: 5px; margin-right: 5px;">ID.4</a>
                     </div>
                 </div>
                 <div class="navigation-top" style="margin-top: 100px;">
@@ -639,5 +654,45 @@
   });
 });
 </script>
+<script type="text/javascript">
+    $(document).ready(function() {
+
+  var div = $("#divToShowHide");
+
+  var pos = div.position();
+
+  $(window).scroll(function() {
+    var windowpos = $(window).scrollTop();
+    console.log(pos.top)
+    if (windowpos-300 > pos.top && pos.top+6800 > windowpos) {
+      div.addClass("AfterScroll");
+       div.removeClass("BeforeScroll");
+     
+    } else {
+       div.addClass("BeforeScroll");
+      div.removeClass("AfterScroll");
+     
+    }
+  });
+});
+</script>
+<!-- <script type="text/javascript">
+    $(document).on("scroll", function() {
+      var pageTop = $(document).scrollTop();
+      var pageBottom = pageTop + $(window).height();
+      var tags = $(".tag");
+
+      for (var i = 0; i < tags.length; i++) {
+        var tag = tags[i];
+
+        if ($(tag).position().top < pageBottom) {
+          $(tag).addClass("visible");
+        } else {
+          $(tag).removeClass("visible");
+        }
+      }
+    });
+</script> -->
+
 </body>
 </html>

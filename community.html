@@ -35,7 +35,7 @@
             <div class="row align-items-center justify-content-between">
                 <div class="col-6 col-lg-4">
                     <div class="float-left">
-                        <p>Good morning, Vidia</p>
+                        <p style="font-weight: 600; font-size: 20px;">Good morning, Vidia</p>
                     </div>
                 </div>
                 <div class="col-6 col-lg-4 col-md-6 col-sm-6 logo-wrapper">
@@ -185,6 +185,14 @@
                 </div>
 
             </div>
+            <div class="row">
+                <div class="box" style="padding-top: 90px;">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                
+            </div>
         </div>
     </section>
     <!--================ First block section end =================--> 
@@ -194,7 +202,7 @@
       <div class="container">
           <div class="row">
               <div class="area-heading" >
-                  <h3 class="community-discussion-list" style="border-bottom: 1px;">Discussions</h3>
+                  <h3 class="community-discussion-list" style="border-bottom: 1px;">DISCUSSIONS</h3>
               </div>
               <div class="col-lg-8 mb-5 mb-lg-0">
                   <div class="blog_left_sidebar">
@@ -696,7 +704,21 @@
                           </form>
                       </aside>
                       <aside class="single_sidebar_widget popular_post_widget" style="background: #f7f7f7;">
-                          <h3 class="widget_title"><i class="fa fa-magic" aria-hidden="true" style="color: #4A808B;"></i> Top Streaks</h3>
+                        <h3 class="widget_title"><i class="fa fa-fire" aria-hidden="true" style="color: #4A808B;"></i> Upcoming Events</h3>
+                        <div class="media post_item">
+                            <img src="img/blog/popular-post/vw-6.png" alt="post" style="width: 20%; height: 20%;">
+                            <div class="media-body">
+                                <a href="article.html">
+                                    <h3>9:00 PM EST</h3>
+                                </a>
+                                <a href="article.html">
+                                    <h3 style="font-weight: 600;">Watch Party: US Women's National Soccer Team</h3>
+                                </a>
+                            </div>
+                        </div>
+                      </aside>
+                      <aside class="single_sidebar_widget popular_post_widget" style="background: #f7f7f7;">
+                          <h3 class="widget_title"><i class="fa fa-magic" aria-hidden="true" style="color: #4A808B;"></i> Top Contributors</h3>
                           <div class="media post_item">
                               <img src="img/blog/c10.png" alt="post">
                               <div class="media-body">
@@ -851,5 +873,69 @@
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/mail-script.js"></script>
 <script src="js/theme.js"></script>
+<script type="text/javascript">
+    
+(function($) {
+    $.fn.countTo = function(options) {
+      
+        // merge the default plugin settings with the custom options
+      
+        options = $.extend({}, $.fn.countTo.defaults, options || {});
+
+        // how many times to update the value, and how much to increment the value on each update
+      
+        var loops = Math.ceil(options.speed / options.refreshInterval),
+            increment = (options.to - options.from) / loops;
+
+        return $(this).each(function() {
+            var _this = this,
+                loopCount = 0,
+                value = options.from,
+                interval = setInterval(updateTimer, options.refreshInterval);
+
+            function updateTimer() {
+                value += increment;
+                loopCount++;
+                $(_this).html(value.toFixed(options.decimals));
+
+                if (typeof(options.onUpdate) == 'function') {
+                    options.onUpdate.call(_this, value);
+                }
+
+                if (loopCount >= loops) {
+                    clearInterval(interval);
+                    value = options.to;
+
+                    if (typeof(options.onComplete) == 'function') {
+                        options.onComplete.call(_this, value);
+                    }
+                }
+            }
+        });
+    };
+
+    $.fn.countTo.defaults = {
+        from: 0,  // the number the element should start at
+        to: 100,  // the number the element should end at
+        speed: 1000,  // how long it should take to count between the target numbers
+        refreshInterval: 100,  // how often the element should be updated
+        decimals: 0,  // the number of decimal places to show
+        onUpdate: null,  // callback method for every time the element is updated,
+        onComplete: null,  // callback method for when the element finishes updating
+    };
+})(jQuery);
+
+jQuery(function($) {
+        $('.timer').countTo({
+            from: 2870,
+            to: 987777,
+            speed: 2000000000,
+            refreshInterval: 50,
+            onComplete: function(value) {
+                console.debug(this);
+            }
+        });
+    });
+</script>
 </body>
 </html>
