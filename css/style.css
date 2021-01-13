@@ -1584,7 +1584,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 .blog_right_sidebar .widget_title {
   font-size: 24px;
   margin-bottom: 40px;
-  color: #2a2a2a; }
+  color: #2a2a2a; 
+  border-bottom: 1px solid #f0e9ff;}
   .blog_right_sidebar .widget_title::after {
     content: "";
     display: block;

@@ -658,7 +658,7 @@ label {
 }
 
 .box {
-	margin-top: -70px;
+	margin-top: -60px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -667,8 +667,8 @@ label {
 	width: 40px;
 	height: 40px;
   display: block;
-	border-right: 2px solid #40C0DE;
-	border-bottom: 2px solid #40C0DE;
+	border-right: 2px solid #D0D0D0;
+	border-bottom: 2px solid #D0D0D0;
 	transform: rotate(45deg);
 	margin: -10px;
 	animation: animate 2s infinite;
